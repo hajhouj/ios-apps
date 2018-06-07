@@ -22,7 +22,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func changerCouleur(_ sender: UIStepper) {
-        if (Int(sender))Int9sender>value0 == couleur>count - 10
+        if (Int(sender.value) >= couleurs.count) {
+			sender.value = 0;
+		}
+		zoneCouleur.backgroundColor = couleurs[Int(sender.value)]
     }
     
     override func didReceiveMemoryWarning() {
